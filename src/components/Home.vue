@@ -90,7 +90,7 @@ export default {
         this.msg += text
       }
       if(this.msg==this.res){
-        this.msg = ''
+        this.msg = '______'
         this.open()
       }
     },
