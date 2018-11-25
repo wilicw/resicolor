@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/resicolor/dist/precache-manifest.a811bbbc5fd952f57d72b41baf928e50.js"
+  "/resicolor/dist/precache-manifest.5785b414427d4e3f6cfee83f765276e9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "resicolor"});

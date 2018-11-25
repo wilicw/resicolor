@@ -4,6 +4,7 @@
       <el-header>
         <h1>Resistor Color</h1>
       </el-header>
+      <br>
       <el-main>
         <el-row>
           <el-col>
@@ -57,7 +58,7 @@ export default {
   name: 'Home',
   data(){
     return {
-      msg: '',
+      msg: '______',
       res: '',
       band0clr: '',
       band1clr: '',
@@ -77,8 +78,14 @@ export default {
       this.genres()
     },
     inputtext: function (text) {
+      if(this.msg == '______'){
+        this.msg = ''
+      }
       if(text==='back'){
         this.msg = this.msg.substring(0, this.msg.length-1)
+        if(this.msg.length==0){
+          this.msg = '______'
+        }
       } else {
         this.msg += text
       }
@@ -93,13 +100,13 @@ export default {
       let band2 = Math.floor((Math.random() * 8))
       let band3 = (Math.floor(Math.random() * 100)+1) % 2
       let res = (band0 * 10 + band1)*Math.pow(10, band2)
-      let str = ''
+      let str = ' '
       if(res>=1000000){
-        str = res/1000000 + 'M'
+        str += res/1000000 + 'M'
       } else if (res>=1000) {
-        str = res/1000 + 'K'
+        str += res/1000 + 'K'
       } else {
-        str = res.toString()
+        str += res.toString()
       }
       if (band3===0){
         str += '±10'
