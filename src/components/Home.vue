@@ -102,11 +102,11 @@ export default {
       let res = (band0 * 10 + band1)*Math.pow(10, band2)
       let str = ' '
       if(res>=1000000){
-        str += res/1000000 + 'M'
+        str = res/1000000 + 'M'
       } else if (res>=1000) {
-        str += res/1000 + 'K'
+        str = res/1000 + 'K'
       } else {
-        str += res.toString()
+        str = res.toString()
       }
       if (band3===0){
         str += '±10'
