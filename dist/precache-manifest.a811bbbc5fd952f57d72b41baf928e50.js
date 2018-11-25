@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/resicolor/dist/fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "9ec71506d105bb3e90236e8aefc20186",
+    "revision": "e4065d2d6b7613c19a5f47937e8e6301",
     "url": "/resicolor/dist/index.html"
   },
   {

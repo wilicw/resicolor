@@ -5,5 +5,10 @@ module.exports = {
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
   parallel: undefined,
-  css: undefined
+  css: undefined,
+
+  pwa: {
+    name: 'ResiColor',
+    themeColor: '#BAAC4D'
+  }
 }
