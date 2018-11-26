@@ -1,4 +1,4 @@
-# resicolor
+# Resistor Color practice
 
 ## Project setup
 ```
