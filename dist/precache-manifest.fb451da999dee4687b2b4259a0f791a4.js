@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "266f18a3f55320acd520",
-    "url": "/resicolor/dist/css/app.d3edaeb9.css"
+    "revision": "0b31814e65e75438657e",
+    "url": "/resicolor/dist/css/app.e6f9536e.css"
   },
   {
-    "revision": "266f18a3f55320acd520",
-    "url": "/resicolor/dist/js/app.e8eda4f1.js"
+    "revision": "0b31814e65e75438657e",
+    "url": "/resicolor/dist/js/app.1799a2ae.js"
   },
   {
-    "revision": "8c195990fb42caabb06b",
+    "revision": "006292c33c8da2855c4f",
     "url": "/resicolor/dist/css/chunk-vendors.9c8e3772.css"
   },
   {
-    "revision": "8c195990fb42caabb06b",
-    "url": "/resicolor/dist/js/chunk-vendors.6bff751b.js"
+    "revision": "006292c33c8da2855c4f",
+    "url": "/resicolor/dist/js/chunk-vendors.bd55c6db.js"
   },
   {
     "revision": "2fad952a20fbbcfd1bf2ebb210dccf7a",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/resicolor/dist/fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "143ae5f647e4f282a1b68bf4b4825793",
+    "revision": "1a6f8fe08650b99edd99bc66501eadfb",
     "url": "/resicolor/dist/index.html"
   },
   {

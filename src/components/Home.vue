@@ -2,14 +2,21 @@
   <div class="hello">
     <el-container>
       <el-header>
-        <h1 @click="show()">Resistor Color</h1>
+        <h1 @click="menushow = true">Resistor Color</h1>
       </el-header>
       <br>
+
+      <el-dialog title="menu" :visible.sync="menushow">
+        <div>Normal mode</div>
+        <br>
+        <div @click="timeingmode()">Timeing mode</div>
+      </el-dialog>
+
       <el-main>
         <el-row>
           <el-col>
             <h3>total: {{total}}</h3>
-            <div class="">
+            <div  @click="show()">
               <svg width="200" height="60">
                 <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>
                 <rect x="20" y="32" width="30" height="5" style="fill:black;opacity:0.5"/>
@@ -66,13 +73,25 @@ export default {
       band1clr: '',
       band2clr: '',
       band3clr: '',
-      total: 0
+      total: 0,
+      menushow: false,
+      time: 120
     }
   },
   created: function () {
     this.genres()
   },
   methods: {
+    timeingmode: async function () {
+      if(this.time==0){
+        alert("time out")
+        return
+      } else {
+        this.timer()
+        this.timeingmode()
+        console.log(this.time)
+      }
+    },
     open: function () {
       this.$message({
         message: 'Correct!',
@@ -101,14 +120,16 @@ export default {
     show: function() {
       alert(this.res)
     },
+    timer: function () {
+      setTimeout(this.time--,1000)
+    },
     genres: function () {
-      let band0 = Math.floor((Math.random() * 10)) + 1
+      let band0 = (Math.floor((Math.random() * 10)))% 9 + 1
       let band1 = Math.floor((Math.random() * 10))
       let band2 = Math.floor((Math.random() * 10)) % 7
       let band3 = (Math.floor(Math.random() * 100) + 1) % 2
       let res = (band0 * 10 + band1) * Math.pow(10, band2)
       let str = ''
-      console.log(band0)
       if (res >= 1000000) {
         str = res / 1000000 + 'M'
       } else if (res >= 1000) {
