@@ -2,7 +2,7 @@
   <div class="hello">
     <el-container>
       <el-header>
-        <h1>Resistor Color</h1>
+        <h1 @click="show()">Resistor Color</h1>
       </el-header>
       <br>
       <el-main>
@@ -97,6 +97,9 @@ export default {
         this.total++
         this.open()
       }
+    },
+    show: function() {
+      alert(this.res)
     },
     genres: function () {
       let band0 = Math.floor((Math.random() * 10)) + 1
