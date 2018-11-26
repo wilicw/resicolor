@@ -8,6 +8,7 @@
       <el-main>
         <el-row>
           <el-col>
+            <h3>total: {{total}}</h3>
             <div class="">
               <svg width="200" height="60">
                 <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>
@@ -64,7 +65,8 @@ export default {
       band0clr: '',
       band1clr: '',
       band2clr: '',
-      band3clr: ''
+      band3clr: '',
+      total: 0
     }
   },
   created: function () {
@@ -92,18 +94,18 @@ export default {
       }
       if (this.msg == this.res) {
         this.msg = '______'
+        this.total++
         this.open()
       }
     },
     genres: function () {
       let band0 = Math.floor((Math.random() * 10)) + 1
       let band1 = Math.floor((Math.random() * 10))
-      let band2 = Math.floor((Math.random() * 10))
+      let band2 = Math.floor((Math.random() * 10)) % 7
       let band3 = (Math.floor(Math.random() * 100) + 1) % 2
       let res = (band0 * 10 + band1) * Math.pow(10, band2)
       let str = ''
       console.log(band0)
-
       if (res >= 1000000) {
         str = res / 1000000 + 'M'
       } else if (res >= 1000) {
