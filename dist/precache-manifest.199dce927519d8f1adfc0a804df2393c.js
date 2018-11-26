@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bb8e73b9bb17c860ff30",
-    "url": "/resicolor/dist/css/app.8701876a.css"
+    "revision": "b43375d09fd2ee0a95f7",
+    "url": "/resicolor/dist/css/app.c4b55c89.css"
   },
   {
-    "revision": "bb8e73b9bb17c860ff30",
-    "url": "/resicolor/dist/js/app.04e85d06.js"
+    "revision": "b43375d09fd2ee0a95f7",
+    "url": "/resicolor/dist/js/app.ccb18632.js"
   },
   {
     "revision": "8c195990fb42caabb06b",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/resicolor/dist/fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "b44422e9b5c4675d9217cf8527c5f524",
+    "revision": "b44602228365e713885bc859aa9af2ae",
     "url": "/resicolor/dist/index.html"
   },
   {

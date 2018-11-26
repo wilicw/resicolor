@@ -43,7 +43,8 @@
           <el-col :span="6"><div><el-button type="info" round @click="inputtext('K')">K</el-button></div></el-col>
         </el-row>
         <el-row :gutter="20">
-          <el-col :span="6" :offset="6"><div><el-button type="info" round @click="inputtext('0')">0</el-button></div></el-col>
+          <el-col :span="6"><div><el-button type="info" round @click="genres()"><i class="el-icon-refresh"></i></el-button></div></el-col>
+          <el-col :span="6"><div><el-button type="info" round @click="inputtext('0')">0</el-button></div></el-col>
           <el-col :span="6"><div><el-button type="info" round @click="inputtext('.')">.</el-button></div></el-col>
           <el-col :span="6"><div><el-button type="info" round @click="inputtext('±')">±</el-button></div></el-col>
         </el-row>
@@ -56,7 +57,7 @@
 <script>
 export default {
   name: 'Home',
-  data(){
+  data () {
     return {
       msg: '______',
       res: '',
@@ -66,7 +67,7 @@ export default {
       band3clr: ''
     }
   },
-  created: function (){
+  created: function () {
     this.genres()
   },
   methods: {
@@ -78,46 +79,46 @@ export default {
       this.genres()
     },
     inputtext: function (text) {
-      if(this.msg == '______'){
+      if (this.msg == '______') {
         this.msg = ''
       }
-      if(text==='back'){
-        this.msg = this.msg.substring(0, this.msg.length-1)
-        if(this.msg.length==0){
+      if (text === 'back') {
+        this.msg = this.msg.substring(0, this.msg.length - 1)
+        if (this.msg.length == 0) {
           this.msg = '______'
         }
       } else {
         this.msg += text
       }
-      if(this.msg==this.res){
+      if (this.msg == this.res) {
         this.msg = '______'
         this.open()
       }
     },
     genres: function () {
-      let band0 = Math.floor((Math.random() * 10))
+      let band0 = Math.floor((Math.random() * 10)) + 1
       let band1 = Math.floor((Math.random() * 10))
-      let band2 = Math.floor((Math.random() * 8))
-      let band3 = (Math.floor(Math.random() * 100)+1) % 2
-      let res = (band0 * 10 + band1)*Math.pow(10, band2)
-      let str = ' '
-      if(res>=1000000){
-        str = res/1000000 + 'M'
-      } else if (res>=1000) {
-        str = res/1000 + 'K'
+      let band2 = Math.floor((Math.random() * 10))
+      let band3 = (Math.floor(Math.random() * 100) + 1) % 2
+      let res = (band0 * 10 + band1) * Math.pow(10, band2)
+      let str = ''
+      console.log(band0)
+
+      if (res >= 1000000) {
+        str = res / 1000000 + 'M'
+      } else if (res >= 1000) {
+        str = res / 1000 + 'K'
       } else {
         str = res.toString()
       }
-      if (band3===0){
+      if (band3 === 0) {
         str += '±10'
-      } else {
-        str += '±5'
       }
       this.res = str
       this.band0clr = this.clr(band0)
       this.band1clr = this.clr(band1)
       this.band2clr = this.clr(band2)
-      this.band3clr = this.clr(band3+20)
+      this.band3clr = this.clr(band3 + 20)
       console.log(str)
     },
     clr: function (band) {
@@ -147,7 +148,6 @@ export default {
         case 21:
           return '#cfb53b'
         default:
-          return
       }
     }
   }
