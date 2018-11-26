@@ -2,29 +2,22 @@
   <div id="app">
     <el-container>
       <el-header>
-        <a class="menu" href="#"><h1 @click="menushow = true">Resistor Color</h1></a>
+        <a class="menu" href="#"><h1 @click="menushow = true">Resistors Color</h1></a>
       </el-header>
-      <br>
-      <el-dialog title="menu" :visible.sync="menushow">
-        <div @click="mode('normal')"><a class="menu" href="#">Normal mode</a></div>
+      <el-dialog title="MENU" :visible.sync="menushow">
+        <div @click="mode('normal')"><router-link class="menu" to="/">Normal mode</router-link></div>
         <br>
-        <div @click="mode('timeing')"><a class="menu" href="#">Timeing mode</a></div>
+        <div @click="mode('timeing')"><router-link class="menu" to="/timeing">Timeing mode</router-link></div>
       </el-dialog>
-      <el-main>
-        <Resistor/>
-      </el-main>
-      <el-footer>
-        <KeyBoard/>
-      </el-footer>
+      <router-view/>
     </el-container>
-
+    <br>
+    <br>
+    <p class="copyright">© 2018 - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a></p>
   </div>
 </template>
 
 <script>
-import KeyBoard from './components/KeyBoard.vue'
-import Resistor from './components/Resistor.vue'
-
 export default {
   name: 'app',
   data () {
@@ -32,12 +25,9 @@ export default {
       menushow: false
     }
   },
-  components: {
-    KeyBoard,
-    Resistor
-  },
   methods: {
     mode: function (mode) {
+      this.menushow = false
       console.log(mode)
     }
   }
@@ -51,11 +41,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .menu {
   color: #2c3e50;
   text-decoration:none;
+}
+
+.copyright {
+    position: relative;
+    bottom: 10px;
+    color: #8f9398;
 }
 </style>

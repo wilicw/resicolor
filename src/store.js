@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import func from './func'
+import { Message } from 'element-ui'
 
 Vue.use(Vuex)
 
@@ -30,6 +31,9 @@ export default new Vuex.Store({
       if (state.input === state.ans) {
         state.input = '______'
         state.total++
+        Message.success({
+          message: 'Correct!'
+        })
         func.genResistor()
       }
     },
