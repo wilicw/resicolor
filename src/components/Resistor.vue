@@ -2,7 +2,7 @@
   <div class="resistor">
     <el-row>
       <el-col>
-        <h3>total: {{this.$store.state.total}}</h3>
+        <h3>Total: {{this.$store.state.total}}</h3>
         <div @click="show()">
           <svg width="200" height="60">
             <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>

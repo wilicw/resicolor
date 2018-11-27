@@ -6,7 +6,7 @@
         <el-input-number size="medium" @change="timechange" :min="10" :max="600" v-model="time"></el-input-number>
         <br>
         <br>
-        <el-button type="success" @click="timer" round>Start</el-button>
+        <el-button type="success" @click="startTime" round>Start</el-button>
       </div>
       <h1 v-if="isstart">{{ time }}</h1>
       <Resistor v-if="isstart"/>
@@ -50,6 +50,10 @@ export default {
     Resistor
   },
   methods: {
+    startTime: function () {
+      this.$store.commit('returnTotal')
+      this.timer()
+    },
     tryagain: function () {
       this.$store.commit('returnTotal')
       this.time = this.avgtime
@@ -75,20 +79,22 @@ export default {
       let total = this.$store.state.total
       let avgtime = this.avgtime
       let avg = (total === 0) ? 0 : (avgtime / total)
-      if (avg < 3) {
+      if (avg === 0) {
+        rate = 0
+      } else if (avg < 3) {
         rate = 5
       } else if (avg < 5) {
         rate = 4.5
       } else if (avg < 6) {
-        rate = 4.2
+        rate = 4.3
       } else if (avg < 8) {
         rate = 4
       } else if (avg < 10) {
         rate = 3
       } else if (avg < 20) {
         rate = 2
-      } else if (avg < 30 || avg === 0) {
-        rate = 0
+      } else if (avg < 30) {
+        rate = 1
       }
       this.rate = rate
     },

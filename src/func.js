@@ -22,6 +22,10 @@ export default {
     band1 = this.color(band1)
     band2 = this.color(band2)
     band3 = this.color(band3 + 20)
+    if (store.state.ans === str) {
+      this.genResistor()
+      return
+    }
     store.commit('genres', {
       band0: band0,
       band1: band1,
