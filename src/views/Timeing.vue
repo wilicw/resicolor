@@ -31,6 +31,7 @@ export default {
   data () {
     return {
       time: 60,
+      avgtime: 60,
       isstart: false,
       end: false
     }
