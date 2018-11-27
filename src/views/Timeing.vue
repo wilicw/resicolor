@@ -12,7 +12,7 @@
       <Resistor v-if="isstart"/>
       <div v-if="end" class="text item">
         Total: {{$store.state.total}} <br><br>
-        Avg: {{($store.state.total === 0) ? 0 : (avgtime/$store.state.total)}} s/one resistor <br><br>
+        Avg: {{($store.state.total === 0) ? 0 : (Math.round((avgtime/$store.state.total) * 10) / 10)}} s/one resistor <br><br>
         <el-button @click="tryagain" round>Try again</el-button>
       </div>
     </el-main>
