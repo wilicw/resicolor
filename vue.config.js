@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: '/resicolor/dist/',
+  baseUrl: '/resicolor/',
   outputDir: undefined,
   assetsDir: undefined,
   runtimeCompiler: undefined,
