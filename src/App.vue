@@ -35,8 +35,15 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face{
+  font-family: AvenirLTStd;
+  font-style: normal;
+  src: url("AvenirLTStd-Book.otf") format("opentype");
+  font-display: swap;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'AvenirLTStd';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
