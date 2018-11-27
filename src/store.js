@@ -38,11 +38,15 @@ export default new Vuex.Store({
       }
     },
     genres (state, data) {
+      state.input = '______'
       state.band0clr = data.band0
       state.band1clr = data.band1
       state.band2clr = data.band2
       state.band3clr = data.band3
       state.ans = data.str
+    },
+    returnTotal (state) {
+      state.total = 0
     }
   },
   actions: {

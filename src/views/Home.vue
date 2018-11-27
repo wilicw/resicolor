@@ -17,7 +17,6 @@ export default {
   name: 'app',
   data () {
     return {
-      menushow: false
     }
   },
   components: {
