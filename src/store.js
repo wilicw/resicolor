@@ -38,7 +38,8 @@ export default new Vuex.Store({
         Notification({
           title: 'Success',
           message: 'Correct!',
-          type: 'success'
+          type: 'success',
+          duration: 200
         })
         func.genResistor()
       }
