@@ -24,9 +24,6 @@ export default {
     Resistor
   },
   methods: {
-    mode: function (mode) {
-      console.log(mode)
-    }
   }
 }
 </script>

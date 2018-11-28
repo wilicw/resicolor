@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Timeing from './views/Timeing.vue'
 import Setting from './views/Setting.vue'
+import NotFound from './views/NotFound.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/resicolor/setting',
       name: 'setting',
       component: Setting
+    },
+    {
+      path: '*',
+      name: 'notfound',
+      component: NotFound
     }
   ]
 })
