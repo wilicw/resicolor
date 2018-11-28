@@ -4,14 +4,6 @@
       <div v-if="(!isstart)&&(!end)">
         <h2>Timeing Mode</h2>
         <h4>Setting</h4>
-        <el-slider
-          v-model="opacity"
-          :step="10"
-          :min="30"
-          :max="80"
-          @change="changeopacity"
-          show-stops>
-        </el-slider>
         <el-input-number size="medium" @change="timechange" :min="10" :max="600" v-model="time"></el-input-number>
         <br>
         <br>
@@ -60,10 +52,6 @@ export default {
     Resistor
   },
   methods: {
-    changeopacity: function (value) {
-      console.log(value)
-      this.$store.commit('changeopacity', (value / 10) / 10)
-    },
     startTime: function () {
       this.$store.commit('returnTotal')
       this.timer()

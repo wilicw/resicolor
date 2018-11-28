@@ -28,7 +28,7 @@ export default {
     }
   },
   created: function () {
-    this.$store.commit('setopacity')
+    this.$store.commit('loadsetting')
   },
   methods: {
     mode: function (mode) {
