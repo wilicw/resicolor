@@ -39,7 +39,7 @@ export default new Vuex.Store({
           title: 'Success',
           message: 'Correct!',
           type: 'success',
-          duration: 200
+          duration: 500
         })
         func.genResistor()
       }
