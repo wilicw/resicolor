@@ -7,19 +7,20 @@ import Setting from './views/Setting.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/resicolor',
       name: 'home',
       component: Home
     },
     {
-      path: '/timeing',
+      path: '/resicolor/timeing',
       name: 'timeing',
       component: Timeing
     },
     {
-      path: '/setting',
+      path: '/resicolor/setting',
       name: 'setting',
       component: Setting
     }
