@@ -8,6 +8,8 @@
         <div @click="mode('normal')"><router-link class="menu" to="/">Normal mode</router-link></div>
         <br>
         <div @click="mode('timeing')"><router-link class="menu" to="/timeing">Timeing mode</router-link></div>
+        <br>
+        <div @click="mode('setting')"><router-link class="menu" to="/setting">Setting</router-link></div>
       </el-dialog>
       <router-view/>
     </el-container>
@@ -24,6 +26,9 @@ export default {
     return {
       menushow: false
     }
+  },
+  created: function () {
+    this.$store.commit('setopacity')
   },
   methods: {
     mode: function (mode) {

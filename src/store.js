@@ -51,7 +51,13 @@ export default new Vuex.Store({
     returnTotal (state) {
       state.total = 0
     },
+    setopacity (state) {
+      if (window.localStorage.getItem('opacity') !== undefined) {
+        state.opacity = window.localStorage.getItem('opacity')
+      }
+    },
     changeopacity (state, n) {
+      window.localStorage.opacity = n
       state.opacity = n
     }
   },

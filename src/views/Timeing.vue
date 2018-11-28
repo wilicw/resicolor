@@ -62,7 +62,7 @@ export default {
   methods: {
     changeopacity: function (value) {
       console.log(value)
-      this.$store.commit('changeopacity', (value/10)/10)
+      this.$store.commit('changeopacity', (value / 10) / 10)
     },
     startTime: function () {
       this.$store.commit('returnTotal')
