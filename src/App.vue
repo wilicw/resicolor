@@ -5,11 +5,11 @@
         <a class="menu" href="#"><h1 @click="menushow = true">Resistors Color</h1></a>
       </el-header>
       <el-dialog title="MENU" :visible.sync="menushow">
-        <div @click="mode('normal')"><router-link class="menu" to="/">Normal mode</router-link></div>
+        <div @click="mode('normal')"><router-link class="menu" to="/resicolor/">Normal mode</router-link></div>
         <br>
-        <div @click="mode('timeing')"><router-link class="menu" to="/timeing">Timeing mode</router-link></div>
+        <div @click="mode('timeing')"><router-link class="menu" to="/resicolor/timeing">Timeing mode</router-link></div>
         <br>
-        <div @click="mode('setting')"><router-link class="menu" to="/setting">Setting</router-link></div>
+        <div @click="mode('setting')"><router-link class="menu" to="/resicolor/setting">Setting</router-link></div>
       </el-dialog>
       <router-view/>
     </el-container>
