@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import func from './func'
-import { Message } from 'element-ui'
+import { Notification } from 'element-ui'
 
 Vue.use(Vuex)
 
@@ -13,7 +13,8 @@ export default new Vuex.Store({
     band1clr: '',
     band2clr: '',
     band3clr: '',
-    total: 0
+    total: 0,
+    opacity: 0.5
   },
   mutations: {
     inputtext (state, text) {
@@ -31,8 +32,10 @@ export default new Vuex.Store({
       if (state.input === state.ans) {
         state.input = '______'
         state.total++
-        Message.success({
-          message: 'Correct!'
+        Notification({
+          title: 'Success',
+          message: 'Correct!',
+          type: 'success'
         })
         func.genResistor()
       }
@@ -47,6 +50,9 @@ export default new Vuex.Store({
     },
     returnTotal (state) {
       state.total = 0
+    },
+    changeopacity (state, n) {
+      state.opacity = n
     }
   },
   actions: {

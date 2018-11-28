@@ -3,6 +3,15 @@
     <el-main>
       <div v-if="(!isstart)&&(!end)">
         <h2>Timeing Mode</h2>
+        <h4>Setting</h4>
+        <el-slider
+          v-model="opacity"
+          :step="10"
+          :min="30"
+          :max="80"
+          @change="changeopacity"
+          show-stops>
+        </el-slider>
         <el-input-number size="medium" @change="timechange" :min="10" :max="600" v-model="time"></el-input-number>
         <br>
         <br>
@@ -38,11 +47,12 @@ export default {
   name: 'app',
   data () {
     return {
-      time: 60,
-      avgtime: 60,
+      time: 120,
+      avgtime: 120,
       isstart: false,
       end: false,
-      rate: 5
+      rate: 5,
+      opacity: 0.5
     }
   },
   components: {
@@ -50,6 +60,10 @@ export default {
     Resistor
   },
   methods: {
+    changeopacity: function (value) {
+      console.log(value)
+      this.$store.commit('changeopacity', (value/10)/10)
+    },
     startTime: function () {
       this.$store.commit('returnTotal')
       this.timer()

@@ -8,10 +8,10 @@
             <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>
             <rect x="20" y="32" width="30" height="5" style="fill:black;opacity:0.5"/>
             <rect x="150" y="32" width="30" height="5" style="fill:black;opacity:0.5"/>
-            <rect x="65" y="20" width="8" height="30" :style="'fill:'+this.$store.state.band0clr+';'"/>
-            <rect x="80" y="20" width="8" height="30" :style="'fill:'+this.$store.state.band1clr+';'"/>
-            <rect x="95" y="20" width="8" height="30" :style="'fill:'+this.$store.state.band2clr+';'"/>
-            <rect x="120" y="20" width="8" height="30" :style="'fill:'+this.$store.state.band3clr+';'"/>
+            <rect x="65" y="20" width="8" height="30" :style="`fill:${this.$store.state.band0clr};opacity:${this.$store.state.opacity}`"/>
+            <rect x="80" y="20" width="8" height="30" :style="`fill:${this.$store.state.band1clr};opacity:${this.$store.state.opacity}`"/>
+            <rect x="95" y="20" width="8" height="30" :style="`fill:${this.$store.state.band2clr};opacity:${this.$store.state.opacity}`"/>
+            <rect x="120" y="20" width="8" height="30" :style="`fill:${this.$store.state.band3clr};opacity:${this.$store.state.opacity}`"/>
           </svg>
           <h1>{{this.$store.state.input}}</h1>
         </div>

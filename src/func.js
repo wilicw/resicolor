@@ -5,7 +5,7 @@ export default {
     let band0 = Math.floor((Math.random() * 10)) % 9 + 1
     let band1 = Math.floor((Math.random() * 10))
     let band2 = Math.floor((Math.random() * 10)) % 7
-    let band3 = (Math.floor(Math.random() * 10)) % 2
+    let band3 = (Math.floor(Math.random() * 10)) % 3 % 2
     let res = (band0 * 10 + band1) * Math.pow(10, band2)
     let str = ''
     if (res >= 1000000) {
@@ -15,7 +15,7 @@ export default {
     } else {
       str = res.toString()
     }
-    if (band3 === 0) {
+    if (band3 === 1) {
       str += '±10'
     }
     band0 = this.color(band0)
@@ -57,9 +57,9 @@ export default {
       case 9:
         return '#FFFFFF'
       case 20:
-        return '#c0c0c0'
-      case 21:
         return '#cfb53b'
+      case 21:
+        return '#c0c0c0'
       default:
     }
   }
