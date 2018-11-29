@@ -1,5 +1,15 @@
 # Resistor Color practice
 
+[![CircleCI](https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg)](https://circleci.com/gh/wilicw/resicolor/tree/master)
+
+## ScreenShot
+
+[![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)]
+
+[![ScreenShot](https://wilicw.github.io/resicolor/screen1.png)]
+
+
+
 ## Project setup
 ```
 npm install

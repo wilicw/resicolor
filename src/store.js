@@ -68,6 +68,8 @@ export default new Vuex.Store({
     loadsetting (state) {
       if (window.localStorage.getItem('opacity') !== undefined) {
         state.opacity = window.localStorage.getItem('opacity')
+      } else {
+        window.localStorage.setItem('opacity', 0.7)
       }
       if (window.localStorage.getItem('band5') !== undefined) {
         state.band5 = window.localStorage.getItem('band5')

@@ -62,8 +62,8 @@ export default {
 }
 
 .copyright {
-    position: relative;
-    bottom: 10px;
-    color: #8f9398;
+  position: relative;
+  bottom: 10px;
+  color: #8f9398;
 }
 </style>
