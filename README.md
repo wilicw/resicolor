@@ -1,4 +1,5 @@
-# Resistor Color practice
+## ResisColor
+## A resistor color practice website develop by Vue.js
 
 [![CircleCI](https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg)](https://circleci.com/gh/wilicw/resicolor/tree/master)
 
