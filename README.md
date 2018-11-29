@@ -5,7 +5,6 @@
 ## ScreenShot
 
 ![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)
-
 ![ScreenShot1](https://wilicw.github.io/resicolor/screen1.png)
 
 
@@ -25,15 +24,7 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
