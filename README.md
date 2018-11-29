@@ -9,7 +9,7 @@
     <img src="https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg" alt="">
   </a>
   <a href="https://github.com/standard/standard">
-    <img src="https://cdn.rawgit.com/standard/standard/master/badge.svg" alt="">
+    <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="">
   </a>
 
   <a href="https://opensource.org/licenses/MIT">
