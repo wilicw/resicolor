@@ -1,5 +1,7 @@
 ## ResisColor
-## A resistor color practice website develop by Vue.js
+> A resistor color practice website develop by Vue.js
+
+![Icon](https://wilicw.github.io/resicolor/icon.png)
 
 [![CircleCI](https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg)](https://circleci.com/gh/wilicw/resicolor/tree/master)
 
@@ -29,3 +31,6 @@ npm run build
 ```
 npm run lint
 ```
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
