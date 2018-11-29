@@ -1,7 +1,6 @@
 {
   "name": "resicolor",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.2.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,7 +10,6 @@
   "dependencies": {
     "element-ui": "^2.4.5",
     "register-service-worker": "^1.0.0",
-    "svg.js": "^2.7.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

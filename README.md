@@ -1,7 +1,6 @@
 ## ResisColor
 > A resistor color practice website develop by Vue.js
 
-
 <p align="center">
   <img src="https://wilicw.github.io/resicolor/icon.png" alt="">
 </p>
@@ -14,13 +13,10 @@
   </a>
 </p>
 
-
 ## ScreenShot
 
 ![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)
 ![ScreenShot1](https://wilicw.github.io/resicolor/screen1.png)
-
-
 
 ## Project setup
 ```
