@@ -1,9 +1,19 @@
 ## ResisColor
 > A resistor color practice website develop by Vue.js
 
-![Icon](https://wilicw.github.io/resicolor/icon.png)
 
-[![CircleCI](https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg)](https://circleci.com/gh/wilicw/resicolor/tree/master)
+<p align="center">
+  <img src="https://wilicw.github.io/resicolor/icon.png" alt="">
+</p>
+<p align="center">
+  <a href="https://circleci.com/gh/wilicw/resicolor/tree/master">
+    <img src="https://circleci.com/gh/wilicw/resicolor/tree/master.svg?style=svg" alt="">
+  </a>
+  <a href="https://github.com/standard/standard">
+    <img src="https://cdn.rawgit.com/standard/standard/master/badge.svg" alt="">
+  </a>
+</p>
+
 
 ## ScreenShot
 
