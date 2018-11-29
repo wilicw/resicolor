@@ -6,10 +6,10 @@ cd dist
 mkdir .circleci
 cd .circleci
 touch config.yml
-echo "version: 2\
-jobs:\
-  build:\
-    branches:\
+echo "version: 2\n\
+jobs:\n\
+  build:\n\
+    branches:\n\
       only: master" > config.yml
 cd ..
 cp index.html 404.html
