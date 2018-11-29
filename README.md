@@ -11,6 +11,10 @@
   <a href="https://github.com/standard/standard">
     <img src="https://cdn.rawgit.com/standard/standard/master/badge.svg" alt="">
   </a>
+
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="">
+  </a>
 </p>
 
 ## ScreenShot
@@ -37,6 +41,10 @@ npm run build
 ```
 npm run lint
 ```
+
+## Docunentation
+
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
