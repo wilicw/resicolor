@@ -4,9 +4,9 @@
 
 ## ScreenShot
 
-[![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)]
+![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)
 
-[![ScreenShot](https://wilicw.github.io/resicolor/screen1.png)]
+![ScreenShot1](https://wilicw.github.io/resicolor/screen1.png)
 
 
 
