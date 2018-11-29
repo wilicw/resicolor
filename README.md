@@ -1,5 +1,5 @@
 ## ResisColor
-> A resistor color practice website develop by Vue.js
+> ⚡ A resistor color practice website develop by Vue.js
 
 <p align="center">
   <img src="https://wilicw.github.io/resicolor/icon.png" alt="">
