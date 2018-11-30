@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## v0.0.2 - 2018-11-30
 ### Added
 - Add Level in Timeing mode ending report
 - Add Changelog.
