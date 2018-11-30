@@ -10,7 +10,7 @@ echo "version: 2\n\
 jobs:\n\
   build:\n\
     branches:\n\
-      only: release" > config.yml
+      only: master" > config.yml
 cd ..
 cp index.html 404.html
 git config --global user.email "wilicw1346@gmail.com"
