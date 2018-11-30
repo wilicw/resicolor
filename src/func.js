@@ -116,8 +116,7 @@ export default {
       band2clr: data.band2clr,
       band3clr: data.band3clr,
       band4clr: data.band4clr,
-      band5clr: data.band5clr,
-      isband5: data.isband5
+      band5clr: data.band5clr
     })
     window.localStorage.setItem('history', JSON.stringify(history))
   }
