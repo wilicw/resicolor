@@ -41,6 +41,7 @@ export default new Vuex.Store({
           type: 'success',
           duration: 500
         })
+        func.commitHistory(state)
         func.genResistor()
       }
     },
@@ -66,15 +67,19 @@ export default new Vuex.Store({
       state.total = 0
     },
     loadsetting (state) {
-      if (window.localStorage.getItem('opacity') !== undefined) {
+      if (window.localStorage.getItem('opacity') !== null) {
         state.opacity = window.localStorage.getItem('opacity')
       } else {
         window.localStorage.setItem('opacity', 0.7)
       }
-      if (window.localStorage.getItem('band5') !== undefined) {
+      if (window.localStorage.getItem('band5') !== null) {
         state.band5 = window.localStorage.getItem('band5')
       } else {
         window.localStorage.setItem('band5', true)
+      }
+      if (window.localStorage.getItem('history') === null) {
+        let data = []
+        window.localStorage.setItem('history', JSON.stringify(data))
       }
     },
     changeopacity (state, n) {

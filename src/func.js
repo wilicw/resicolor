@@ -106,5 +106,19 @@ export default {
       case 23:
         return '#964B00'
     }
+  },
+  commitHistory (data) {
+    let history = JSON.parse(window.localStorage.getItem('history'))
+    history.push({
+      ans: data.ans,
+      band0clr: data.band0clr,
+      band1clr: data.band1clr,
+      band2clr: data.band2clr,
+      band3clr: data.band3clr,
+      band4clr: data.band4clr,
+      band5clr: data.band5clr,
+      isband5: data.isband5
+    })
+    window.localStorage.setItem('history', JSON.stringify(history))
   }
 }

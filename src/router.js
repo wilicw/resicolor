@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Timeing from './views/Timeing.vue'
 import Setting from './views/Setting.vue'
 import NotFound from './views/NotFound.vue'
+import History from './views/History.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/resicolor/setting',
       name: 'setting',
       component: Setting
+    },
+    {
+      path: '/resicolor/history',
+      name: 'history',
+      component: History
     },
     {
       path: '*',

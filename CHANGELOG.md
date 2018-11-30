@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+## v0.0.3 - 2018-11-30
+### Added
+- Add History Mode to show the resistor you have answered.
 
 ## v0.0.2 - 2018-11-30
 ### Added
