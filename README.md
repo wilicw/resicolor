@@ -49,6 +49,10 @@ npm run lint
 - [Vue router](https://router.vuejs.org/)
 - [element CSS](http://element.eleme.io/#/en-US)
 
+## ChangeLog
+
+[ChangeLog](https://github.com/wilicw/resicolor/blob/master/CHANGELOG.md)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
