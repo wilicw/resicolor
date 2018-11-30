@@ -10,6 +10,8 @@
         <div @click="mode('timeing')"><router-link class="menu" to="/resicolor/timeing">Timeing mode</router-link></div>
         <br>
         <div @click="mode('setting')"><router-link class="menu" to="/resicolor/setting">Setting</router-link></div>
+        <br>
+        <div @click="mode('history')"><router-link class="menu" to="/resicolor/history">History</router-link></div>
       </el-dialog>
       <router-view/>
     </el-container>
