@@ -21,6 +21,7 @@
         </el-rate>
         <br>
         Total: {{$store.state.total}} <br><br>
+        Level: {{$store.state.opacity}} <br><br>
         Avg: {{($store.state.total === 0) ? 0 : (Math.round((avgtime/$store.state.total) * 10) / 10 + 's/one resistor')}} <br><br>
         <el-button @click="tryagain" round>Try again</el-button>
       </div>
