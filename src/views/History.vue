@@ -4,7 +4,7 @@
       <h2>History</h2>
       <h3>Total: {{total}}</h3>
       <el-card class="box-card">
-        <div v-for="i in data" class="text item">
+        <div v-for="i in data" :key="i.ans" class="text item">
           <svg v-if="!i.is5band" width="200" height="60">
             <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>
             <rect x="20" y="32" width="30" height="5" style="fill:black;opacity:0.5"/>
