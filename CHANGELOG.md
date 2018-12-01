@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unrelease]
+### Added
+- Add sitemap
 ### Fixed
 - Fixed history bug.
 - Fixed PWA app path.
