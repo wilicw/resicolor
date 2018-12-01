@@ -17,7 +17,7 @@
     </el-container>
     <br>
     <br>
-    <p class="copyright">© 2018 - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a></p>
+    <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License</a></p>
   </div>
 </template>
 
