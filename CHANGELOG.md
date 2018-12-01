@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unrelease]
+### Added
+- Add score.
 
 ## [v0.0.5] - 2018-12-01
 ### Added
