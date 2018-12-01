@@ -11,6 +11,8 @@
       </div>
       <h2 v-if="isstart">{{ time }}</h2>
       <Resistor v-if="isstart"/>
+    </el-main>
+    <el-main>
       <KeyBoard v-if="isstart"/>
       <div v-if="end">
         <el-rate
@@ -106,3 +108,6 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+</style>
