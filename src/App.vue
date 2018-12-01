@@ -9,13 +9,13 @@
         <br>
         <div @click="mode('timeing')"><router-link class="menu" to="/resicolor/timeing">Timeing mode</router-link></div>
         <br>
-        <div @click="mode('setting')"><router-link class="menu" to="/resicolor/setting">Setting</router-link></div>
-        <br>
         <div @click="mode('history')"><router-link class="menu" to="/resicolor/history">History</router-link></div>
+        <br>
+        <div @click="mode('setting')"><router-link class="menu" to="/resicolor/setting">Setting</router-link></div>
       </el-dialog>
       <router-view/>
       <el-footer class="footer">
-        <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License</a></p>
+        <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License.</a></p>
       </el-footer>
     </el-container>
   </div>
