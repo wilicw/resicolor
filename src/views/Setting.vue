@@ -14,8 +14,6 @@
         </el-slider>
       </div>
     </el-main>
-    <el-footer>
-    </el-footer>
   </div>
 </template>
 
