@@ -59,6 +59,7 @@ export default new Vuex.Store({
         state.band1clr = data.band1
         state.band2clr = data.band2
         state.band3clr = data.band3
+        state.band4clr = ''
         state.is5band = false
       }
       state.ans = data.str
