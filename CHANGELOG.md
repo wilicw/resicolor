@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unrelease]
+
+## [v0.0.5] - 2018-12-01
 ### Added
 - Add clean history in history mode.
 ### Changed
