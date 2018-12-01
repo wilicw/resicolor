@@ -51,6 +51,6 @@ export default {
 
 <style scoped>
  .el-row {
-   margin-bottom: 15px;
+   margin-bottom: 20px;
  }
 </style>
