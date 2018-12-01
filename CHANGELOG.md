@@ -36,3 +36,6 @@
 
 [Unreleased]: https://github.com/wilicw/resicolor/tree/develop
 [0.0.1]: https://github.com/wilicw/resicolor/releases/tag/v0.0.1
+[0.0.2]: https://github.com/wilicw/resicolor/releases/tag/v0.0.2
+[0.0.3]: https://github.com/wilicw/resicolor/releases/tag/v0.0.3
+[0.0.4]: https://github.com/wilicw/resicolor/releases/tag/v0.0.4
