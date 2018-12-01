@@ -1,20 +1,20 @@
 # Changelog
 
-##[Unrelease]
+## [Unrelease]
 ### Fixed
 - Fixed history bug.
 - Fixed PWA app path.
 
-## v0.0.3 - 2018-11-30
+## [v0.0.3] - 2018-11-30
 ### Added
 - Add History Mode to show the resistor you have answered.
 
-## v0.0.2 - 2018-11-30
+## [v0.0.2] - 2018-11-30
 ### Added
 - Add Level in Timeing mode ending report
 - Add Changelog.
 
-## v0.0.1 - 2018-11-30
+## [v0.0.1] - 2018-11-30
 ### Added
 - Create project use Vuejs.
 - Add Vuex.
