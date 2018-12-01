@@ -2,6 +2,7 @@
 
 ## [Unrelease]
 ### Added
+- Add delete history confirm dialog.
 - Add score.
 
 ## [v0.0.5] - 2018-12-01
