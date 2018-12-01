@@ -2,7 +2,8 @@
 
 ##[Unrelease]
 ### Fixed
-- history bug.
+- Fixed history bug.
+- Fixed PWA app path.
 
 ## v0.0.3 - 2018-11-30
 ### Added
