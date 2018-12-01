@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unrelease]
+### Added
+- Add clean history in history mode.
 ### Changed
 - Change HTML structure.
 - Modify typesetting.

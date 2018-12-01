@@ -2,6 +2,7 @@
   <div id="home">
     <el-main>
       <h2>History</h2>
+      <a v-if="cleanshow" class="clean" @click="clean" href="#">Clean history</a>
       <h3>Total: {{total}}</h3>
       <div v-for="i in data" :key="i.ans" class="text item">
         <el-card class="box-card">
@@ -40,7 +41,8 @@ export default {
   data () {
     return {
       total: 0,
-      data: null
+      data: null,
+      cleanshow: true
     }
   },
   created () {
@@ -51,11 +53,22 @@ export default {
       let data = JSON.parse(window.localStorage.getItem('history'))
       this.data = data
       this.total = data.length
+      if (this.total === 0) {
+        this.cleanshow = false
+      }
+    },
+    clean: function () {
+      let data = []
+      window.localStorage.setItem('history', JSON.stringify(data))
+      this.history()
     }
   }
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
+.clean {
+  text-decoration:none;
+  color: #8f9398;
+}
 </style>
