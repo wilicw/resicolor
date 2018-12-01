@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unrelease]
+
+## [v0.0.4] - 2018-12-01
 ### Added
 - Add sitemap
 ### Fixed
