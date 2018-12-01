@@ -23,7 +23,7 @@
           text-color="#ff9900">
         </el-rate>
         <br>
-        Score: {{score}}
+        Score: {{score}} <br><br>
         Total: {{$store.state.total}} <br><br>
         Level: {{$store.state.opacity}} <br><br>
         Avg: {{($store.state.total === 0) ? 0 : (Math.round((avgtime/$store.state.total) * 10) / 10 + 's/one resistor')}} <br><br>
@@ -83,6 +83,7 @@ export default {
       let rate = 0
       let total = this.$store.state.total
       let time = this.avgtime
+      let level = this.$store.state.opacity
       let avg = (total === 0) ? 0 : (time / total)
       if (avg === 0) {
         rate = 0
@@ -101,7 +102,7 @@ export default {
       } else if (avg < 30) {
         rate = 1
       }
-      let score = (1/avg) * rate * (1/(level*level)) * 29.9792358 * 1000
+      let score = (1 / avg) * rate * (1 / (level * level)) * 29.9792358 * 1000
       this.score = Math.round(score * 1000) / 1000
       this.rate = rate
     },
