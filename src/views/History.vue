@@ -58,9 +58,20 @@ export default {
       }
     },
     clean: function () {
-      let data = []
-      window.localStorage.setItem('history', JSON.stringify(data))
-      this.history()
+      this.$confirm('This will permanently delete the history. Continue?', 'Warning', {
+        confirmButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        type: 'warning',
+        center: true
+      }).then(() => {
+        let data = []
+        window.localStorage.setItem('history', JSON.stringify(data))
+        this.history()
+        this.$message({
+          type: 'success',
+          message: 'Delete completed'
+        })
+      }).catch()
     }
   }
 }
