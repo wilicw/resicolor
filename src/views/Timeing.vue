@@ -9,9 +9,10 @@
         <br>
         <el-button type="success" @click="startTime" round>Start</el-button>
       </div>
-      <h1 v-if="isstart">{{ time }}</h1>
+      <h2 v-if="isstart">{{ time }}</h2>
       <Resistor v-if="isstart"/>
-      <div v-if="end" class="text item">
+      <KeyBoard v-if="isstart"/>
+      <div v-if="end">
         <el-rate
           v-model="rate"
           disabled
@@ -25,7 +26,6 @@
         Avg: {{($store.state.total === 0) ? 0 : (Math.round((avgtime/$store.state.total) * 10) / 10 + 's/one resistor')}} <br><br>
         <el-button @click="tryagain" round>Try again</el-button>
       </div>
-      <KeyBoard v-if="isstart"/>
     </el-main>
   </div>
 </template>
@@ -106,7 +106,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

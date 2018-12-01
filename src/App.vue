@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header>
+      <el-header height="45px">
         <a class="menu" href="#"><h1 @click="menushow = true">Resistors Color</h1></a>
       </el-header>
       <el-dialog title="MENU" :visible.sync="menushow">
@@ -14,7 +14,7 @@
         <div @click="mode('history')"><router-link class="menu" to="/resicolor/history">History</router-link></div>
       </el-dialog>
       <router-view/>
-      <el-footer>
+      <el-footer class="footer">
         <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License</a></p>
       </el-footer>
     </el-container>
@@ -65,7 +65,12 @@ export default {
 
 .copyright {
   position: relative;
-  bottom: 10px;
+  bottom: 0px;
   color: #8f9398;
+}
+
+.footer {
+  vertical-align: bottom;
+  bottom: 15px;
 }
 </style>

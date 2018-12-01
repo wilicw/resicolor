@@ -2,9 +2,10 @@
   <div id="home">
     <el-main>
       <h2>History</h2>
+      <a v-if="cleanshow" class="clean" @click="clean" href="#">Clean history</a>
       <h3>Total: {{total}}</h3>
-      <el-card class="box-card">
-        <div v-for="i in data" :key="i.ans" class="text item">
+      <div v-for="i in data" :key="i.ans" class="text item">
+        <el-card class="box-card">
           <svg v-if="i.band4clr===''" width="200" height="60">
             <rect x="50" y="20" rx="10" ry="10" width="100" height="30" style="fill:#edde91;opacity:0.8"/>
             <rect x="20" y="32" width="30" height="5" style="fill:black;opacity:0.5"/>
@@ -26,8 +27,9 @@
           </svg>
           <br>
           {{i.ans}}
-        </div>
-      </el-card>
+        </el-card>
+        <br>
+      </div>
     </el-main>
   </div>
 </template>
@@ -39,7 +41,8 @@ export default {
   data () {
     return {
       total: 0,
-      data: null
+      data: null,
+      cleanshow: true
     }
   },
   created () {
@@ -50,11 +53,22 @@ export default {
       let data = JSON.parse(window.localStorage.getItem('history'))
       this.data = data
       this.total = data.length
+      if (this.total === 0) {
+        this.cleanshow = false
+      }
+    },
+    clean: function () {
+      let data = []
+      window.localStorage.setItem('history', JSON.stringify(data))
+      this.history()
     }
   }
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
+.clean {
+  text-decoration:none;
+  color: #8f9398;
+}
 </style>

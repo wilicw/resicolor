@@ -1,8 +1,12 @@
 # Changelog
 
 ## [Unrelease]
+### Added
+- Add clean history in history mode.
 ### Changed
 - Change HTML structure.
+- Modify typesetting.
+- Each resistor use one card in history mode.
 
 ## [v0.0.4] - 2018-12-01
 ### Added

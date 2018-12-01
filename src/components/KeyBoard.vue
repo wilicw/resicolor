@@ -51,20 +51,6 @@ export default {
 
 <style scoped>
  .el-row {
-   margin-bottom: 20px;
-   &:last-child {
-     margin-bottom: 0;
-   }
- }
- .el-col {
-   border-radius: 4px;
- }
- .grid-content {
-   border-radius: 4px;
-   min-height: 36px;
- }
- .row-bg {
-   padding: 10px 0;
-   background-color: #f9fafc;
+   margin-bottom: 15px;
  }
 </style>
