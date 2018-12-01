@@ -2,6 +2,8 @@
   <div id="home">
     <el-main>
       <Resistor/>
+    <el-main>
+    </el-main>
       <KeyBoard/>
     </el-main>
   </div>
@@ -26,6 +28,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
 </style>
