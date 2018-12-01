@@ -25,10 +25,8 @@
         Avg: {{($store.state.total === 0) ? 0 : (Math.round((avgtime/$store.state.total) * 10) / 10 + 's/one resistor')}} <br><br>
         <el-button @click="tryagain" round>Try again</el-button>
       </div>
-    </el-main>
-    <el-footer>
       <KeyBoard v-if="isstart"/>
-    </el-footer>
+    </el-main>
   </div>
 </template>
 

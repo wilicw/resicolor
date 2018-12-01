@@ -14,10 +14,10 @@
         <div @click="mode('history')"><router-link class="menu" to="/resicolor/history">History</router-link></div>
       </el-dialog>
       <router-view/>
+      <el-footer>
+        <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License</a></p>
+      </el-footer>
     </el-container>
-    <br>
-    <br>
-    <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License</a></p>
   </div>
 </template>
 

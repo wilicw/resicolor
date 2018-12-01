@@ -2,10 +2,8 @@
   <div id="home">
     <el-main>
       <Resistor/>
-    </el-main>
-    <el-footer>
       <KeyBoard/>
-    </el-footer>
+    </el-main>
   </div>
 </template>
 
