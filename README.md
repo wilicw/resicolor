@@ -1,4 +1,4 @@
-## ResisColor
+## ResiColor
 > ⚡ A resistor color practice website develop by Vue.js
 
 <p align="center">

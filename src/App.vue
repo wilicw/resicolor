@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
+$black: #2c3e50;
 @font-face{
   font-family: AvenirLTStd;
   font-style: normal;
@@ -54,12 +55,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $black;
   margin-top: 20px;
 }
 
 .menu {
-  color: #2c3e50;
+  color: $black;
   text-decoration:none;
 }
 
