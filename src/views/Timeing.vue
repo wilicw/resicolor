@@ -67,7 +67,7 @@ export default {
     },
     timer: async function () {
       this.isstart = true
-      console.log(this.time)
+      //console.log(this.time)
       if (this.time > 0) {
         await setTimeout(() => {
           this.time--

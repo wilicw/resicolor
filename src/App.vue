@@ -15,7 +15,7 @@
       </el-dialog>
       <router-view/>
       <el-footer class="footer">
-        <p class="copyright">© 2018 ResiColor - <a class="menu" href="https://github.com/wilicw/resicolor">Source Code</a> on Github. <a class="menu" href="https://opensource.org/licenses/MIT">MIT License.</a></p>
+        <p class="copyright">This project is <a class="menu" href="https://choosealicense.com/licenses/mit/">MIT Licensed</a> // Source Code on <a class="menu" href="https://github.com/wilicw/resicolor">Github</a><br><br>© 2018 ResiColor</p>
       </el-footer>
     </el-container>
   </div>
@@ -65,8 +65,7 @@ $black: #2c3e50;
 }
 
 .copyright {
-  position: relative;
-  bottom: 0px;
+  font-size: 10pt;
   color: #8f9398;
 }
 
