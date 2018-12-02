@@ -1,11 +1,11 @@
 # Changelog
 
-## [Unrelease]
+## [Unreleased]
 ### Added
 - Add delete history confirm dialog.
 - Add score.
 
-## [v0.0.5] - 2018-12-01
+## [0.0.5] - 2018-12-01
 ### Added
 - Add clean history in history mode.
 ### Changed
@@ -13,23 +13,23 @@
 - Modify typesetting.
 - Each resistor use one card in history mode.
 
-## [v0.0.4] - 2018-12-01
+## [0.0.4] - 2018-12-01
 ### Added
 - Add sitemap
 ### Fixed
 - Fixed history bug.
 - Fixed PWA app path.
 
-## [v0.0.3] - 2018-11-30
+## [0.0.3] - 2018-11-30
 ### Added
 - Add History Mode to show the resistor you have answered.
 
-## [v0.0.2] - 2018-11-30
+## [0.0.2] - 2018-11-30
 ### Added
 - Add Level in Timeing mode ending report
 - Add Changelog.
 
-## [v0.0.1] - 2018-11-30
+## [0.0.1] - 2018-11-30
 ### Added
 - Create project use Vuejs.
 - Add Vuex.
