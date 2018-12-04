@@ -19,6 +19,9 @@ export default {
     return {
     }
   },
+  created() {
+    this.$store.state.band5 = true
+  },
   components: {
     KeyBoard,
     Resistor

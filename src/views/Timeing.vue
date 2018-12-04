@@ -7,6 +7,10 @@
         <el-input-number size="medium" @change="timechange" :min="10" :max="600" v-model="time"></el-input-number>
         <br>
         <br>
+        5 bands resistor <el-switch v-model="band5" @change="change5band()">
+        </el-switch>
+        <br>
+        <br>
         <el-button type="success" @click="startTime" round>Start</el-button>
       </div>
       <h2 v-if="isstart">{{ time }}</h2>
@@ -47,7 +51,8 @@ export default {
       end: false,
       rate: 5,
       opacity: 0.5,
-      score: 0
+      score: 0,
+      band5: false
     }
   },
   components: {
@@ -109,6 +114,10 @@ export default {
     timechange: function (value) {
       this.avgtime = value
       console.log(value)
+    },
+    change5band: function () {
+      console.log(this.band5)
+      this.$store.commit('changeband', this.band5)
     }
   }
 }
