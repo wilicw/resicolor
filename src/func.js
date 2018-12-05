@@ -8,7 +8,6 @@ export default {
     } else {
       is5band = false
     }
-    is5band = (((Math.floor(Math.random() * 100)) % 23) === 0)
     let res
     let band0 = Math.floor((Math.random() * 10)) % 9 + 1
     let band1 = Math.floor(Math.random() * 10)
