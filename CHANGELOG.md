@@ -1,9 +1,12 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.6] - 2018-12-05
 ### Added
 - Add delete history confirm dialog.
 - Add score.
+- Add switch to Enable/Disabled 5 bands resistors.
 
 ## [0.0.5] - 2018-12-01
 ### Added
