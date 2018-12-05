@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import func from './func'
 export default {
   name: 'app',
   data () {
@@ -30,6 +31,7 @@ export default {
     }
   },
   created: function () {
+    func.genv1tov2()
     this.$store.commit('loadsetting')
   },
   methods: {
