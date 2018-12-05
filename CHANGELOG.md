@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.6] - 2018-12-05
 ### Added
 - Add delete history confirm dialog.
 - Add score.
