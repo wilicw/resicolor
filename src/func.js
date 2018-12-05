@@ -4,77 +4,46 @@ export default {
   genResistor () {
     let is5band
     if (store.state.band5) {
-      is5band = (((Math.floor(Math.random() * 100)) % 23) === 0)
+      is5band = ((this.rand() * 10 % 23) === 0)
     } else {
       is5band = false
     }
     let res
-    let band0 = Math.floor((Math.random() * 10)) % 9 + 1
-    let band1 = Math.floor(Math.random() * 10)
-    let band2
-    let band3
-    let band4
-    let band0clr
-    let band1clr
-    let band2clr
-    let band3clr
-    let band4clr
-    if (is5band) {
-      band2 = Math.floor(Math.random() * 10)
-      band3 = Math.floor(Math.random() * 10) % 8
-      band4 = (Math.floor(Math.random() * 10)) % 4
-      res = (band0 * 100 + band1 * 10 + band2) * Math.pow(10, band3)
-      band1clr = this.color(band1)
-      band0clr = this.color(band0)
-      band2clr = this.color(band2)
-      band3clr = this.color(band3)
-      band4clr = this.color(band4 + 20)
-    } else {
-      band2 = Math.floor(Math.random() * 10) % 8
-      band3 = (Math.floor(Math.random() * 10)) % 3 % 2
-      res = (band0 * 10 + band1) * Math.pow(10, band2)
+    let band = [0, 0, 0, 0, 0]
+    let bandclr = [0, 0, 0, 0, 0]
 
-      band0clr = this.color(band0)
-      band1clr = this.color(band1)
-      band2clr = this.color(band2)
-      band3clr = this.color(band3 + 20)
-    }
-    let str = ''
-    if (res >= 1000000) {
-      str = res / 1000000 + 'M'
-    } else if (res >= 1000) {
-      str = res / 1000 + 'K'
-    } else {
-      str = res.toString()
-    }
+    band[0] = this.rand() % 9 + 1
+    band[1] = this.rand()
     if (is5band) {
-      if (band4 === 1) {
-        str += '±10'
-      } else if (band4 === 2) {
-        str += '±2'
-      } else if (band4 === 3) {
-        str += '±1'
+      band[2] = this.rand()
+      band[3] = this.rand() % 8
+      band[4] = this.rand() % 4 + 20
+      for (let i = 0; i < 5; i++) {
+        bandclr[i] = this.numtocolor(band[i])
       }
     } else {
-      if (band3 === 1) {
-        str += '±10'
+      band[2] = this.rand() % 8
+      band[3] = this.rand() % 3 % 2 + 20
+      for (let i = 0; i < 4; i++) {
+        bandclr[i] = this.numtocolor(band[i])
       }
     }
+    let str = this.bandtoresistor(band)
     if (store.state.ans === str) {
       this.genResistor()
       return
     }
     store.commit('genres', {
-      band0: band0clr,
-      band1: band1clr,
-      band2: band2clr,
-      band3: band3clr,
-      band4: band4clr,
+      band0: bandclr[0],
+      band1: bandclr[1],
+      band2: bandclr[2],
+      band3: bandclr[3],
+      band4: bandclr[4],
       is5band: is5band,
       str: str
     })
   },
-  color (band) {
+  numtocolor (band) {
     switch (band) {
       case 0:
         return '#000000'
@@ -106,17 +75,129 @@ export default {
         return '#964B00'
     }
   },
-  commitHistory (data) {
+  colortonum (color) {
+    switch (color) {
+      case '#000000':
+        return 0
+      case '#964B00':
+        return 1
+      case '#FF0000':
+        return 2
+      case '#ffa500':
+        return 3
+      case '#fff600':
+        return 4
+      case '#9acd32':
+        return 5
+      case '#6495ed':
+        return 6
+      case '#9400d3':
+        return 7
+      case '#a0a0a0':
+        return 8
+      case '#FFFFFF':
+        return 9
+      case '#cfb53b':
+        return 20
+      case '#c0c0c0':
+        return 21
+      case '#FF0000':
+        return 22
+      case '#964B00':
+        return 23
+    }
+    return -1
+  },
+  genv1tov2 () {
     let history = JSON.parse(window.localStorage.getItem('history'))
-    history.push({
-      ans: data.ans,
-      band0clr: data.band0clr,
-      band1clr: data.band1clr,
-      band2clr: data.band2clr,
-      band3clr: data.band3clr,
-      band4clr: data.band4clr,
-      band5clr: data.band5clr
+    let newarray = []
+    history.forEach((i) => {
+      let data = []
+      console.log(i)
+      data.push(this.colortonum(i.band0clr), this.colortonum(i.band1clr), this.colortonum(i.band2clr), this.colortonum(i.band3clr))
+      if (this.colortonum(i.band4clr) !== undefined || this.colortonum(i.band4clr) !== '') {
+        data.push(this.colortonum(i.band4clr))
+      }
+      newarray.push({ data })
     })
+    window.localStorage.setItem('history', JSON.stringify(newarray))
+    window.localStorage.setItem('version', '0.0.2')
+  },
+  readhistory () {
+    let history = JSON.parse(window.localStorage.getItem('history'))
+    let version = window.localStorage.getItem('version')
+    let data = []
+    if (version !== '0.0.2') {
+      this.genv1tov2()
+    }
+    history = JSON.parse(window.localStorage.getItem('history'))
+    history.forEach((i) => {
+      data.push({
+        ans: this.bandtoresistor(i.data),
+        band0clr: this.numtocolor(i.data[0]),
+        band1clr: this.numtocolor(i.data[1]),
+        band2clr: this.numtocolor(i.data[2]),
+        band3clr: this.numtocolor(i.data[3]),
+        band4clr: this.numtocolor(i.data[4])
+      })
+    })
+    return data
+  },
+  commitHistory (data) {
+    let version = window.localStorage.getItem('version')
+    if (version !== '0.0.2') {
+      this.genv1tov2()
+    }
+    let history = JSON.parse(window.localStorage.getItem('history'))
+    let newdata = []
+    newdata.push(this.colortonum(data.band0clr), this.colortonum(data.band1clr), this.colortonum(data.band2clr), this.colortonum(data.band3clr))
+    if (data.is5band) {
+      newdata.push(this.colortonum(data.band4clr))
+    }
+    history.push({ data: newdata })
     window.localStorage.setItem('history', JSON.stringify(history))
+  },
+  rand () {
+    return Math.floor(Math.random() * 10)
+  },
+  bandtoresistor (band) {
+    let bandclr = []
+    let is5band = !((band[4] === undefined) || (band[4] === 0) || (band[4] === -1))
+    let res
+    if (is5band) {
+      res = (band[0] * 100 + band[1] * 10 + band[2]) * Math.pow(10, band[3])
+      for (let i = 0; i < 4; i++) {
+        bandclr[i] = this.numtocolor(band[i])
+      }
+      bandclr[4] = this.numtocolor(band[4] + 20)
+    } else {
+      res = (band[0] * 10 + band[1]) * Math.pow(10, band[2])
+      for (let i = 0; i < 3; i++) {
+        bandclr[i] = this.numtocolor(band[i])
+      }
+      bandclr[3] = this.numtocolor(band[3] + 20)
+    }
+    let str = ''
+    if (res >= 1000000) {
+      str = res / 1000000 + 'M'
+    } else if (res >= 1000) {
+      str = res / 1000 + 'K'
+    } else {
+      str = res.toString()
+    }
+    if (is5band) {
+      if (band[4] === 21) {
+        str += '±10'
+      } else if (band[4] === 22) {
+        str += '±2'
+      } else if (band[4] === 23) {
+        str += '±1'
+      }
+    } else {
+      if (band[3] === 21) {
+        str += '±10'
+      }
+    }
+    return str
   }
 }
