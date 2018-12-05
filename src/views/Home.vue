@@ -19,7 +19,7 @@ export default {
     return {
     }
   },
-  created() {
+  created () {
     this.$store.state.band5 = true
   },
   components: {
