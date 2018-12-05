@@ -20,7 +20,7 @@ export default {
     }
   },
   created () {
-    this.$store.state.band5 = true
+    this.$store.commit('changeband', true)
   },
   components: {
     KeyBoard,
