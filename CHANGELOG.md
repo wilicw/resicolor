@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Add new way to store history data.
 
 ## [0.0.6] - 2018-12-05
 ### Added
