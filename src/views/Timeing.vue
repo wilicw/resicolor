@@ -59,6 +59,9 @@ export default {
     KeyBoard,
     Resistor
   },
+  created () {
+    this.$store.commit('changeband', false)
+  },
   methods: {
     startTime: function () {
       this.$store.commit('returnTotal')
