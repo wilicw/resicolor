@@ -109,6 +109,10 @@ export default {
     return -1
   },
   genv1tov2 () {
+    let version = window.localStorage.getItem('version')
+    if (version === '0.0.2') {
+      return
+    }
     let history = JSON.parse(window.localStorage.getItem('history'))
     let newarray = []
     history.forEach((i) => {
