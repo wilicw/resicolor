@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Added
 - Add new way to store history data.
+### Changed
+- Change keyboard to square.
 
 ## [0.0.6] - 2018-12-05
 ### Added
