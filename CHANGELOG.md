@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Added
 - Add new way to store history data.
+### Changed
+- Change keyboard to square.
 
 ## [0.0.6] - 2018-12-05
 ### Added
@@ -50,3 +52,4 @@
 [0.0.3]: https://github.com/wilicw/resicolor/releases/tag/v0.0.3
 [0.0.4]: https://github.com/wilicw/resicolor/releases/tag/v0.0.4
 [0.0.5]: https://github.com/wilicw/resicolor/releases/tag/v0.0.5
+[0.0.6]: https://github.com/wilicw/resicolor/releases/tag/v0.0.6
