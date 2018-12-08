@@ -17,7 +17,7 @@
   </a>
 </p>
 
-## ScreenShot
+## ScreenShots
 
 ![ScreenShot](https://wilicw.github.io/resicolor/screen0.png)
 ![ScreenShot1](https://wilicw.github.io/resicolor/screen1.png)
@@ -56,6 +56,7 @@ $ npm run lint
 ## Contribute
 
 Please do contribute! Issues and pull requests are welcome.
+
 Thank you for your help improving this project!
 
 ## License
