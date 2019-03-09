@@ -1,10 +1,15 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.7] - 2019-03-09
 ### Added
 - Add new way to store history data.
 ### Changed
+- Change year in footer.
 - Change keyboard to square.
+### Fixed
+- Fixed first load history bug.
 
 ## [0.0.6] - 2018-12-05
 ### Added
