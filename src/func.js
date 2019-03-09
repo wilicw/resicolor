@@ -8,7 +8,6 @@ export default {
     } else {
       is5band = false
     }
-    let res
     let band = [0, 0, 0, 0, 0]
     let bandclr = [0, 0, 0, 0, 0]
 
@@ -101,10 +100,6 @@ export default {
         return 20
       case '#c0c0c0':
         return 21
-      case '#FF0000':
-        return 22
-      case '#964B00':
-        return 23
     }
     return -1
   },

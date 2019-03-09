@@ -31,8 +31,8 @@ export default {
     }
   },
   created: function () {
-    func.genv1tov2()
     this.$store.commit('loadsetting')
+    func.genv1tov2()
   },
   methods: {
     mode: function (mode) {
