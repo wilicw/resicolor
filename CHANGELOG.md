@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Add menu button.
 
 ## [0.0.7] - 2019-03-09
 ### Added

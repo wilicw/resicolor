@@ -2,7 +2,19 @@
   <div id="app">
     <el-container>
       <el-header height="45px">
-        <a class="menu" href="#"><h1 @click="menushow = true">Resistors Color</h1></a>
+        <el-row :gutter="20">
+          <el-col :span="20">
+            <div style="text-align:left;">
+              <h2>Resistors Color</h2>
+            </div>
+          </el-col>
+          <el-col :span="4">
+            <div style="text-align:right;">
+              <a class="menu" href="#"><h1 @click="menushow = true"><i class="el-icon-menu"></i></h1></a>
+            </div>
+          </el-col>
+        </el-row>
+
       </el-header>
       <el-dialog title="MENU" :visible.sync="menushow">
         <div @click="mode('normal')"><router-link class="menu" to="/resicolor/">Normal mode</router-link></div>
