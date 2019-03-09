@@ -58,3 +58,4 @@
 [0.0.4]: https://github.com/wilicw/resicolor/releases/tag/v0.0.4
 [0.0.5]: https://github.com/wilicw/resicolor/releases/tag/v0.0.5
 [0.0.6]: https://github.com/wilicw/resicolor/releases/tag/v0.0.6
+[0.0.7]: https://github.com/wilicw/resicolor/releases/tag/v0.0.7
