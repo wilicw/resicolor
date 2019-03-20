@@ -2,7 +2,7 @@
   <div id="timeing">
     <el-main>
       <div v-if="(!isstart)&&(!end)">
-        <h2>Timeing Mode</h2>
+        <h2>Timing Mode</h2>
         <h4>Setting</h4>
         <el-input-number size="medium" @change="timechange" :min="10" :max="600" v-model="time"></el-input-number>
         <br>
