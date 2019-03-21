@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Timeing from './views/Timeing.vue'
+import Timing from './views/Timing.vue'
 import Setting from './views/Setting.vue'
 import NotFound from './views/NotFound.vue'
 import History from './views/History.vue'
@@ -17,9 +17,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/resicolor/timeing',
-      name: 'timeing',
-      component: Timeing
+      path: '/resicolor/timing',
+      name: 'timing',
+      component: Timing
     },
     {
       path: '/resicolor/setting',

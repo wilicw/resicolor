@@ -19,7 +19,7 @@
       <el-dialog title="MENU" :visible.sync="menushow">
         <div @click="mode('normal')"><router-link class="menu" to="/resicolor/">Normal mode</router-link></div>
         <br>
-        <div @click="mode('timeing')"><router-link class="menu" to="/resicolor/timeing">Timing mode</router-link></div>
+        <div @click="mode('timing')"><router-link class="menu" to="/resicolor/timing">Timing mode</router-link></div>
         <br>
         <div @click="mode('history')"><router-link class="menu" to="/resicolor/history">History</router-link></div>
         <br>

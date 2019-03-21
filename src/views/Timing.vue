@@ -1,5 +1,5 @@
 <template>
-  <div id="timeing">
+  <div id="timing">
     <el-main>
       <div v-if="(!isstart)&&(!end)">
         <h2>Timing Mode</h2>
