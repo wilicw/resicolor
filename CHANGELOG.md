@@ -1,8 +1,28 @@
 # Changelog
 
-## [Unreleased]
+## [0.0.8] - 2019-07-22
 ### Added
 - Add menu button.
+### Changed
+- Update npm packages
+
+```
+element-ui               ^2.6.1  →  ^2.10.1
+npm                      ^6.9.0  →  ^6.10.1
+vue                      ^2.6.8  →  ^2.6.10
+vue-router               ^3.0.1  →   ^3.0.7
+vuex                     ^3.1.0  →   ^3.1.1
+@vue/cli-plugin-babel    ^3.5.0  →   ^3.9.2
+@vue/cli-plugin-eslint   ^3.5.0  →   ^3.9.2
+@vue/cli-plugin-pwa      ^3.5.0  →   ^3.9.0
+@vue/cli-service         ^3.5.0  →   ^3.9.3
+babel-eslint            ^10.0.1  →  ^10.0.2
+eslint                  ^5.15.1  →   ^6.1.0
+eslint-plugin-vue        ^5.2.2  →   ^5.2.3
+node-sass               ^4.11.0  →  ^4.12.0
+sass-loader              ^7.0.3  →   ^7.1.0
+```                                                                                     
+vue-template-compiler    ^2.6.8  →  ^2.6.10          
 
 ## [0.0.7] - 2019-03-09
 ### Added
