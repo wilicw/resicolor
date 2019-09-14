@@ -154,6 +154,9 @@ export default {
       newdata.push(this.colortonum(data.band4clr))
     }
     history.push({ data: newdata })
+    if (history.length > 500) {
+      history.shift()
+    }
     window.localStorage.setItem('history', JSON.stringify(history))
   },
   rand () {

@@ -2,8 +2,7 @@
   <div id="home">
     <el-main>
       <h2>History</h2>
-      <a v-if="cleanshow" class="clean" @click="clean" href="#">Clean history</a>
-      <h3>Total: {{total}}</h3>
+      <h4>Only show recent data</h4>
       <div v-for="i in data" :key="i.ans" class="text item">
         <el-card class="box-card">
           <svg v-if="i.band4clr===undefined" width="200" height="60">
@@ -40,9 +39,7 @@ export default {
   name: 'app',
   data () {
     return {
-      total: 0,
-      data: null,
-      cleanshow: true
+      data: null
     }
   },
   created () {
@@ -52,26 +49,6 @@ export default {
     history: function () {
       let data = func.readhistory()
       this.data = data
-      this.total = data.length
-      if (this.total === 0) {
-        this.cleanshow = false
-      }
-    },
-    clean: function () {
-      this.$confirm('This will permanently delete the history. Continue?', 'Warning', {
-        confirmButtonText: 'OK',
-        cancelButtonText: 'Cancel',
-        type: 'warning',
-        center: true
-      }).then(() => {
-        let data = []
-        window.localStorage.setItem('history', JSON.stringify(data))
-        this.history()
-        this.$message({
-          type: 'success',
-          message: 'Delete completed'
-        })
-      }).catch()
     }
   }
 }
