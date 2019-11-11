@@ -42,7 +42,7 @@ $ yarn build
 $ yarn lint
 ```
 
-## Docunentation
+## Documentation
 
 - [Vuejs](https://vuejs.org/v2/guide/)
 - [Vuex](https://vuex.vuejs.org/)
